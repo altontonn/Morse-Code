@@ -36,4 +36,9 @@ M_CODE = {
   '---..' => '8',
   '----.' => '9',
   '-----' => '0'
-}
+}.freeze
+
+def decode_char(char)
+  M_CODE[char]
+end
+
