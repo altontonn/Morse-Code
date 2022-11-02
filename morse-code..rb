@@ -42,3 +42,9 @@ def decode_char(char)
   M_CODE[char]
 end
 
+def decode_word(word)
+    new_word = word.split(/ /)
+    result = new_word.map { |m| decode_char(m) }
+    result.join
+end
+
