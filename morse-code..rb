@@ -47,3 +47,11 @@ def decode_word(word)
     result = new_word.map { |m| decode_char(m) }
     result.join
 end
+
+def decode_message(message)
+  @message = message.split(/ /)
+  @result = @message.map { |m| decode_word(m) }
+  @result.join(" ")
+end
+
+
