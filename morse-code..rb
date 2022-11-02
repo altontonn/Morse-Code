@@ -47,4 +47,3 @@ def decode_word(word)
     result = new_word.map { |m| decode_char(m) }
     result.join
 end
-
