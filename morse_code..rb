@@ -1,4 +1,4 @@
-M_CODE = {
+@source = {
   '.-' => 'A',
   '-...' => 'B',
   '-.-.' => 'C',
@@ -39,19 +39,17 @@ M_CODE = {
 }.freeze
 
 def decode_char(char)
-  M_CODE[char]
+  @source[char]
 end
 
 def decode_word(word)
-    new_word = word.split(/ /)
-    result = new_word.map { |m| decode_char(m) }
-    result.join
+  new_word = word.split(/ /)
+  result = new_word.map { |m| decode_char(m) }
+  result.join
 end
 
 def decode_message(message)
   @message = message.split(/ /)
   @result = @message.map { |m| decode_word(m) }
-  @result.join(" ")
+  @result.join(' ')
 end
-
-
